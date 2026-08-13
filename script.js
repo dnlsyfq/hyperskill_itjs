@@ -13,11 +13,11 @@ console.log(getDifference([34 ,56, 23, 54, 43]))
 
 
 function checkData(data){
-    if(data.isArray){
+    if(Array.isArray(data)){
         return true
     } else{
         return false
     }
 }
 
-console.log(checkData(array))
+console.log(checkData([34 ,56, 23, 54, 43]))
