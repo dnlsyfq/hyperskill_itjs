@@ -25,3 +25,4 @@ console.log(fruits.length);
 
 let newArray = new Array(4);
 console.log(newArray);
+
