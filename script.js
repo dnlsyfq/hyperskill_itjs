@@ -14,10 +14,14 @@ console.log(getDifference([34 ,56, 23, 54, 43]))
 
 function checkData(data){
     if(Array.isArray(data)){
-        return true
+        console.log(true)
     } else{
-        return false
+        console.log(false)
     }
 }
 
-console.log(checkData([34 ,56, 23, 54, 43]))
+let fruits = []
+console.log(fruits.length);
+
+let newArray = new Array(4);
+console.log(newArray);

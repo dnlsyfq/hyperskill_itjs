@@ -132,3 +132,66 @@ alertMessage(textFunc);
 
 // 'Hello world!' will be printed to the console
 ```
+
+
+```aiignore
+Array.isArray(arr) // true or false
+```
+
+```
+let newArray = new Array(4); // 4 empty item
+let platforms = new Array('JetBrains', 'Hyperskill', 'WebStorm', 'PyCharm');
+```
+
+### Array methods
+
+* fill() returns a modified version of an array by changing the array's elements to a fixed value. 
+```
+fill(value, start, end)
+
+
+const myNumbers = [1, 4, 7, 10, 15];
+
+// fill with 0 from position 1 until position 3
+console.log(myNumbers.fill(0, 1, 3)); // [1, 0, 0, 10, 15]
+
+console.log(myNumbers.fill(13)); // [13, 13, 13, 13, 13]
+
+// fill with 5 from position 2
+console.log(myNumbers.fill(5, 2)); // [13, 13, 5, 5, 5]
+
+let numberArray = new Array(6).fill(2); // [2, 2, 2, 2, 2, 2]
+```
+
+* from - The Array.from() method creates a new Array instance from an array-like or iterable object (such as a Map).
+```
+Array.from(object, mapFunction, thisValue)
+
+object: is the object to convert to an array. This is a required field.
+
+mapFunction: is the map function to call on each element of the array. This is an optional field.
+
+thisValue: is a value to use as this when executing the mapFunction — also an optional field. (The this keyword will be discussed in a future topic.)
+
+Array.from('Hello'); // ['H', 'e', 'l', 'l', 'o']
+
+function createArray(...arguments) {
+  return Array.from(arguments);
+}
+
+createArray(2, 4, 6); // [2, 4, 6]
+
+Array.from([3, 5, 7], x => x * x); // [9, 25, 49]
+```
+
+* of
+  Array.of() was brought in with Javascript version ES6. It creates a new array instance that includes the given arguments, regardless of the type or number of inputs.
+```
+Array.of(15); // [15]
+
+Array.of(101, 202, 303); // [101, 202, 303]
+
+Array.of(undefined); // [undefined]
+
+
+```
