@@ -196,3 +196,81 @@ Array.of(undefined); // [undefined]
 
 ```
 
+### Objects
+
+* methods keys(), values() and entries()
+```
+Object.keys(emp_object)
+
+let employee = {
+  'name': 'Bruce Reese',
+  'email': 'diam.sed@augue.org',
+  'company': 'Velit Pellentesque Institute'
+};
+
+const employeeKeys = Object.keys(employee);
+
+employeeKeys.forEach((key) => console.log(key));
+
+employeeKeys.forEach((key) => console.log(employee[key]));
+
+employeeKeys.forEach(key => {
+  if (key === 'company') {
+    employee[key] = "Stiedemann Group";
+  }
+});
+
+
+
+
+```
+
+* methods values()
+
+```
+Object.values(objectName)
+
+employeeValues.forEach((value) => console.log(value));
+
+employeeValues.forEach((value) => console.log(employee[value]));
+
+```
+
+* methods entries()
+  returns the key-value pair of each pair in an array
+```aiignore
+
+const employeeEntries = Object.entries(employee);
+
+console.log(employeeEntries);
+/* 
+[
+  [ 'name', 'Bruce Reese' ],
+  [ 'email', 'diam.sed@augue.org' ],
+  [ 'company', 'Velit Pellentesque Institute' ]
+]
+*/
+
+employeeEntries.forEach((entries) => {
+  const key = entries[0];
+  const value = entries[1];
+
+  console.log(`Key: ${key}, Value: ${value}`);
+});
+
+// Key: name, Value: Bruce Reese
+// Key: email, Value: diam.sed@augue.org
+// Key: company, Value: Velit Pellentesque Institute
+
+```
+
+```aiignore
+
+function getProductPrices(products) {
+    return Object.entries(products).map(([product, price]) => {
+        return `${product}: $${price}`;
+    }).join('\n');
+}
+const prices = getProductPrices(products);
+console.log(prices);
+```
