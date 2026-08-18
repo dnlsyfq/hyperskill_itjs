@@ -274,3 +274,18 @@ function getProductPrices(products) {
 const prices = getProductPrices(products);
 console.log(prices);
 ```
+
+### Boolean
+
+```aiignore
+console.log(!false);  // true
+console.log(!true);   // false
+console.log(!!true);  // true
+
+console.log(true || 0);      // true
+console.log(false && "sun"); // false
+console.log(1 || 0);         // 1
+
+console.log(!false && !true);   // false
+console.log(!(false && !true)); // true
+```
